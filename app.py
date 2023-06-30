@@ -149,8 +149,6 @@ def main():
         page_title="AI researcher - Twitter threads", page_icon=":bird:")
 
     st.header("AI researcher - Twitter threads :bird:")
-    # openaiapi = os.getenv("OPENAI_API_KEY")
-
     openaiapi = st.text_input("OpenAI API Key")
     query = st.text_input("Topic of twitter thread")
 
@@ -158,7 +156,8 @@ def main():
 
     if query:
         print(query)
-        st.write("Generating twitter thread for: ", query)
+        st.write("Generating twitter thread for: ", query,
+                 "Please be patient, this may take a few minutes")
 
         search_results = search(query)
         urls = find_best_article_urls(search_results, query)
