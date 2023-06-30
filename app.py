@@ -149,10 +149,10 @@ def main():
         page_title="AI researcher - Twitter threads", page_icon=":bird:")
 
     st.header("AI researcher - Twitter threads :bird:")
-    openaiapi = st.text_input("OpenAI API Key")
+    openai_api_key = st.text_input("OpenAI API Key")
     query = st.text_input("Topic of twitter thread")
 
-    openai.api_key = openaiapi
+    openai.api_key = openai_api_key
 
     if query:
         print(query)
