@@ -150,7 +150,7 @@ def main():
 
     st.header("AI researcher - Twitter threads :bird:")
     # openaiapi = os.getenv("OPENAI_API_KEY")
-    openaiapi = st.text_input("Please provide your openai api key")
+    openaiapi = st.text_input("OpenAI API Key")
     query = st.text_input("Topic of twitter thread")
 
     openai.api_key = openaiapi
